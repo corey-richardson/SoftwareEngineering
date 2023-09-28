@@ -29,8 +29,23 @@ int main()
 	//TASKS:
 
 	//Shift right by 1 and display
-
+	number >>= 1;
+	displayAndCompare(number);
 
 	//Shift left by 1 and display
+	number <<= 1;
+	displayAndCompare(number);
 
 }
+
+/*
+Binary value 0000000000001011 is decimal 11
+Binary value 0000000000010110 is decimal 22
+Binary value 0000000000101100 is decimal 44
+Binary value 0000000010110000 is decimal 176
+Binary value 0000000000001011 is decimal 11
+Binary value 0000000000000101 is decimal 5
+Binary value 0000000000001010 is decimal 10
+*/
+
+// LSB is lost
