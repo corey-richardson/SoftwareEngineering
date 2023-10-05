@@ -2,6 +2,8 @@
 
 int main()
 {
+    // Initialised OUTSIDE of the scope-bubble of the for loop so 
+    // can be used anywhere in the main function.
     bool quitEarly = false;
     for (int i = 0; i <= 10; i++)   // potentially loop from 1 to 10  
     {
