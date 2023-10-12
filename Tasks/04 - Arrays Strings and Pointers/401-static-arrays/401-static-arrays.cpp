@@ -44,6 +44,10 @@ int main()
 
     //Write task 1 solution here
     int64_t sum = 0L;   //Result needs to be bigger than int to avoid overflow
+    for (int i = 0; i < N; i++) {
+        sum += nums[i];
+    }
+    cout << "Sum of the array totals " << sum << endl;
 
 
     // ***********************************************************************************************************************
@@ -51,6 +55,10 @@ int main()
     // ***********************************************************************************************************************
 
     //Write task 2 solution here
+    float mean = (float)sum / (float)N;
+    cout << "Mean of the array is " << mean << endl;
+
+    // N is an awful variable name for length; I didn't choose it
 
 }
 
