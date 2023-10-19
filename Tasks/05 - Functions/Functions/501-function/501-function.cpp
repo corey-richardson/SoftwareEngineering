@@ -3,9 +3,9 @@ using namespace std;
 
 int L;		//This is not an ideal location - we will soon address this
 
-int main()
+int main() // global scope bad
 {
-	const string message = "Welcome to Computer Science";
+	const string message = "Welcome to Computer Science but longer";
 	
 	//Get the length of the string
 	L = message.length();
