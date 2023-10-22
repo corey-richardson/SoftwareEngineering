@@ -13,5 +13,9 @@ int main()
 	cout << "Number of multiplications performed: " << getCount() << endl;
 
 	// Task - uncomment this and try to build the code
-	//updateArea(r1);
+	// updateArea(r1);
+	/*
+	The function updateArea is declared as static. 
+	This means it is only visible within the file in which is is defined, which in this case is Rect_t.cpp.
+	*/
 }
