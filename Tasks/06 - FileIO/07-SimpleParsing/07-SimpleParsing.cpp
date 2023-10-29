@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 using namespace std;
 
 void createFile(string fn);
@@ -37,19 +38,31 @@ int main()
     string subjectArea;
     inputStream >> subjectArea;
 
-    //Display the result
+    // Display the result
     cout << "Subject Area is " << subjectArea << endl;
-
-    int code;
 
     //TO DO: 
     // Now find the module ID number
     // Store it in the integer variable code
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
+    for (int i = 0; i < 2; i++) {
+        inputStream >> nextWord;
+    }
+    int code;
+    inputStream >> code;
+    code++;
 
     // (iii) Close
     inputStream.close();
+
+    // Display the result
+    cout << "New Module Code is " << code << "\n\n";
+
+    string moduleString = subjectArea + to_string(code);
+    cout << "New Module String is " << moduleString << endl;
+
+    // cout << "New module code will be " << subjectArea << code + 1 << endl;
 
     return 0;
 }

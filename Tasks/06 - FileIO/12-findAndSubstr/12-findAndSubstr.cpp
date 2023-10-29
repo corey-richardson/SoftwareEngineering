@@ -39,16 +39,16 @@ int main()
     string following = dataString.substr(pos);      //From pos to the end
 
     //Now read the next two words
-    istringstream iss(following);   //From ID: onwards
+    istringstream issId(following);   //From ID: onwards
     string strTag;
     string strCode;
-    iss >> strTag >> strCode;             //Read both
-    if (iss.fail()) {
+    issId >> strTag >> strCode;             //Read both
+    if (issId.fail()) {
         cerr << "Could not read module code" << endl;
         cout << "Time for coffee" << endl;
         return -1;
     }
-    cout << "Found " << strTag << endl;
+    cout << "Found '" << strTag << "'" << endl;
     cout << "Followed by " << strCode << endl;
 
     //Conversion
@@ -63,6 +63,24 @@ int main()
         cout << "That broke. Time for coffee" << endl;
         return -1;
     }
+
+    pos = dataString.find("Area:");
+    if (pos == -1) {
+        cerr << "Subject Area not found." << endl;
+        return -1;
+    }
+
+    following = dataString.substr(pos); // pos onwards
+    istringstream issArea(following);
+    issArea >> strTag >> strCode;
+    if (issArea.fail()) {
+        cerr << "Could not read subject area" << endl;
+        cout << "Time for a milkshake";
+        return -1;
+    }
+    cout << "Found '" << strTag << "'" << endl;
+    cout << "Followed by " << strCode << endl;
+
 
     // Done
     cout << "All is well!" << endl;

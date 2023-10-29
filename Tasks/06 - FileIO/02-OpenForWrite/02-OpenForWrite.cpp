@@ -15,16 +15,18 @@ int main()
     ofstream outputStream;
     outputStream.open("myfile.txt");
 
-    //Check to see if it worked
+    // Check to see if it worked
     if (outputStream.is_open() == false) {
+        // It is possible to redirect cerr so the user does not see it. 
+        // This won't be done in this lab, but be aware this is possible
         cerr << "Cannot create the file" << endl;
         return -1;
     }
 
-    //Write a string to the file - instead of cout, it's `outputStream`
+    // Write a string to the file - instead of cout, it's `outputStream`
     outputStream << "12345" << endl;
     outputStream << "-----" << endl;
 
-    //Close
+    // Close
     outputStream.close();
 }

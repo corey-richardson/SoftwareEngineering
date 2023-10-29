@@ -72,6 +72,24 @@ int main()
         cout << "Oops - could not find it" << endl;
     }
 
+    // Look for "Subject Area:" and <subject area>
+    pattern = "\\s*(Subject\\s*Area):\\s*(\\w+)\\s*";
+    if (regex_search(dataString, match, pattern)) {
+        cout << "Full Match:" << match[0] << endl;
+        if (match.size() >= 3) {
+            tag = match[1];
+            strCode = match[2];
+            cout << "Pair found: (" << tag << ", " << strCode << ")" << endl;
+
+            cout << tag << " is '" << strCode << "'" << endl;
+        }
+    }
+    else
+    {
+        cerr << "Not found";
+        return -1;
+    }
+
     // Done
     cout << "All is well!" << endl;
     return 0;

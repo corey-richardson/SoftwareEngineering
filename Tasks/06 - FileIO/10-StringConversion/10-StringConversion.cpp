@@ -4,6 +4,13 @@
 #include <stdexcept>
 using namespace std;
 
+/*
+stoi() - convert string to integer
+stol() - convert string to long
+stof() - convert string to float
+stod() - convert string to double
+*/
+
 //Used to create a file for testing purposes
 void createFile(string fn);
 int readFileIntoString(string fn, string& allLines);
@@ -47,6 +54,17 @@ int main()
             //TODO:
             // Read the next word
             // If successful, try to convert to an integer then break from the while loop
+            iss >> nextWord;
+
+            // Guard clause prevents nesting
+            if (iss.fail()) {
+                cerr << "Failed to read next word.";
+                return -1;
+            }
+
+            int moduleCode = stoi(nextWord) + 1;
+            cout << "COMP" << moduleCode;
+            break;
         }
     }
 
