@@ -96,3 +96,15 @@ int main()
 
 }
 
+/*
+a=100, b=100
+a=101, b=100
+a=101
+Address of a = 000000D4FACFFBE4
+Data at address p1 = 101
+a=102
+Data at address p1 = 102
+Address p2 = 000000D4FACFFBE4
+Data at address p2 = 102
+a=200
+*/

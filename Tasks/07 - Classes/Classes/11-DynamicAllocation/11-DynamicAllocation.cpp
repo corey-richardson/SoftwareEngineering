@@ -1,6 +1,9 @@
 // 09-Overloading.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+// For dynamically allocated objects, you control both when an object is created, and when it is destroyed. 
+// For this you use the new and delete keywords.
+
 #include <iostream>
 #include "Rect.h"
 using namespace COMP1000;

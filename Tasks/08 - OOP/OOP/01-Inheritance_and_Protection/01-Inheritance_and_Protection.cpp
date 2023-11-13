@@ -64,7 +64,7 @@ public:
 
 int main()
 {
-    Pet p1("Carrot", 2);
-    Dog d1("Scrapper", 5);
-    Cat c1("Furry", 3);
+    Pet p1("Carrot", 2); // instantiates an object of class Pet
+    Dog d1("Scrapper", 5); // instantiates an object of class Dog, which inherits from Pet
+    Cat c1("Furry", 3); // instantiates an object of class Dog, which inherits from Pet
 }

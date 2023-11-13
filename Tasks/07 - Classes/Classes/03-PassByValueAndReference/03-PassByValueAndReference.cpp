@@ -7,6 +7,8 @@ int addOneByValue(int u) {
 }
 
 void addOneByPointer(int* pointerToU) {
+    // Note that pointerToU = *pointerToU + 1; would be incorrect. 
+    // This would change the stored address to 101.
     *pointerToU = *pointerToU + 1;
 }
 
@@ -19,16 +21,16 @@ int main()
     // Create and initialise a
     int a = 100;
 
-    // (a) - by value - will a be affected?
+    // (a) - by value - will a be affected? No
     int b = addOneByValue(a);
     cout << "a = " << a << endl;
     cout << "b = " << b << endl;
 
-    // (b) - by pointer - will a be affected?
+    // (b) - by pointer - will a be affected? Yes
     addOneByPointer(&a);
     cout << "a = " << a << endl;
 
-    // (c) - by reference - will a be affected?
+    // (c) - by reference - will a be affected? Yes
     addOneByReference(a);
     cout << "a = " << a << endl;
 

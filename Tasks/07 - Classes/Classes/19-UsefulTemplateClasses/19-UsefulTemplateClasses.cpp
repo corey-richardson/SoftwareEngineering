@@ -70,7 +70,7 @@ int main()
     cout << endl;
     
     //The "modern" way
-    for (float x : vec) {
+    for (float x : vec) { // similar to C# foreach loop: foreach (type varName in iterableName)
         cout << x << endl;
     }
     

@@ -2,7 +2,7 @@
 using namespace std;
 
 //global x
-//int x = 0;
+//int x = 0; // collision
 
 //Project namespace for both variables and code
 namespace COMP1000 {

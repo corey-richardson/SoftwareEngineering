@@ -14,4 +14,11 @@ StringBanner::StringBanner(string txt, char bannerCharacter) {
 	bannerChar = bannerCharacter;
 }
 
-//Move display() here
+// display banner
+void StringBanner::display() { // also add to .h file
+	displayLine();
+	cout << endl;
+	cout << bannerChar << " " << msg << " " << bannerChar << endl;
+	displayLine();
+	cout << endl;
+}

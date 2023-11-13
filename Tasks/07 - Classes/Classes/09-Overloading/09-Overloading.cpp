@@ -13,5 +13,8 @@ int main()
 
     r0.display();
     r1.display();
+
+    r0.updateArea(5, 2);
+    r0.display(); // exp. 10
 }
 

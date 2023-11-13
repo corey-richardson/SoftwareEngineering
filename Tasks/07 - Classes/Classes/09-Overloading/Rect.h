@@ -24,7 +24,8 @@ namespace COMP1000 {
             }
         }
     public:
-        //Constructor - v1 (has an additional parameter used for file logging)
+        // Constructor - v1 (has an additional parameter used for file logging)
+        // The compiler determines which is called based on the parameters you pass.
         Rect(double w, double h, string id) {
             //Log message to terminal
             cout << "Constructor running for " << id << endl;
@@ -44,6 +45,7 @@ namespace COMP1000 {
         }
 
         // Constructor - v2 (As no file ID is provided, no file logging will be performed)
+        // The compiler determines which is called based on the parameters you pass.
         Rect(double w, double h) {
             cout << "Constructor running" << endl;
 
@@ -88,6 +90,14 @@ namespace COMP1000 {
         // Output to terminal
         void display() {
             cout << fileName << ", Width: " << width << ", Height: " << height << ", Area: " << area << endl;
+        }
+
+        // Update area
+        // With parameters; public - can be called from main
+        void updateArea(int w, int h) {
+            width = w;
+            height = h;
+            area = width * height;
         }
     };
 }

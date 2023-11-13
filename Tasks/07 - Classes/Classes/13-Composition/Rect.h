@@ -13,7 +13,7 @@ namespace COMP1000 {
         double area;
         string fileName;
         ofstream outputStream;
-        //StringBanner banner;
+        StringBanner banner;
 
     private:
         void updateArea() {
@@ -33,7 +33,10 @@ namespace COMP1000 {
         }
 
         //Constructor - v1 (has an additional parameter used for file logging)
-        Rect(double w, double h, string id) {
+        Rect(double w, double h, string id) :banner(id) {
+            // What this does is ensure the constructor for object banner is run 
+            // with the required information BEFORE the Rect constructor is run.
+            // 
             //Log message to terminal
             cout << "Constructor running for " << id << endl;
 
@@ -52,7 +55,10 @@ namespace COMP1000 {
         }
 
         // Constructor - v2 (As no file ID is provided, no file logging will be performed)
-        Rect(double w, double h) {
+        Rect(double w, double h) : banner("NO FILE") {
+            // What this does is ensure the constructor for object banner is run 
+            // with the required information BEFORE the Rect constructor is run.
+
             cout << "Constructor running" << endl;
 
             //Initialise members
