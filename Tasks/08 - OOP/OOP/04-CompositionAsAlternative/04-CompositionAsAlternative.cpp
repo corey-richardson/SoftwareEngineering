@@ -43,7 +43,11 @@ public:
 int main()
 {
     //Encapsulate a new Pet inside a MedicalCase (using composition)
+
+    /* The constructor for Pet runs before the constructor for MedicalCase
+    A MedicalCase field of type Pet is present. */
     MedicalCase case1("Tiddles", 13, 101);
+
     case1.addCharge(150.55);
     case1.addCharge(225.0);
     cout << case1.generateStatement();

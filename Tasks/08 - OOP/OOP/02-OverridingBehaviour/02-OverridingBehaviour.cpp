@@ -75,7 +75,21 @@ public:
 
 
 // Write solution here
+class Tortoise : public Pet {
 
+public:
+    Tortoise(string name, int age) : Pet(name, age)
+    {
+        cout << "Construction for Tortoise " << name << endl;
+    }
+    void setAge(int a) {
+        //Only update if in range.
+        if ((a >= 0) && (a <= 250)) {
+            cout << "Changing the age of " << _name << " from " << _age << " to " << a << endl;
+            _age = a;
+        }
+    }
+};
 
 
 int main()
@@ -83,11 +97,11 @@ int main()
     Pet p1("Carrot", 2);
     Dog d1("Scrapper", 5);
     Cat c1("Furry", 3);
-    //Tortoise t1("Speedy", 50);
+    Tortoise t1("Speedy", 50);
 
     //Happy birthday Furry Cat
     c1.setAge(4);
 
     //Happy birthday Speedy the Tortoise
-    //t1.setAge(101);
+    t1.setAge(101);
 }
